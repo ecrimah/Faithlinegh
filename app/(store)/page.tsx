@@ -482,12 +482,12 @@ export default function Home() {
               </p>
 
               {/* Mobile: image between text and buttons */}
-              <div className="relative w-full h-[200px] sm:h-[230px] shrink-0 overflow-hidden rounded-xl my-1.5 sm:my-2 md:hidden">
+              <div className="relative w-full h-[150px] sm:h-[170px] shrink-0 overflow-hidden rounded-xl my-1.5 sm:my-2 md:hidden">
                 <Image
-                  src="/home-cta-fashion.png"
-                  alt="Faithlinegh — quality fashion"
+                  src="/category-bags.png"
+                  alt="Faithlinegh — quality fashion bags"
                   fill
-                  className="object-contain object-center"
+                  className="object-cover object-center"
                   sizes="100vw"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-brown/25 to-transparent" />
@@ -513,10 +513,10 @@ export default function Home() {
             {/* Desktop: image on the right */}
             <div className="relative hidden md:block md:w-2/5 min-h-0 overflow-hidden md:rounded-r-2xl sm:md:rounded-r-3xl">
               <Image
-                src="/home-cta-fashion.png"
-                alt="Faithlinegh — quality fashion"
+                src="/category-bags.png"
+                alt="Faithlinegh — quality fashion bags"
                 fill
-                className="object-contain object-center"
+                className="object-cover object-center"
                 sizes="40vw"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-brown/30 to-transparent" />

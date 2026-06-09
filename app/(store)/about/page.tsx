@@ -249,8 +249,8 @@ export default function AboutPage() {
             </div>
             <div className="relative w-full md:w-2/5 min-h-[10rem] sm:min-h-[12rem] md:min-h-0 overflow-hidden md:rounded-r-2xl sm:md:rounded-r-3xl rounded-b-2xl sm:rounded-b-3xl md:rounded-bl-none">
               <Image
-                src="/about-lifestyle.png"
-                alt="Faithlinegh fashion"
+                src="/category-bags.png"
+                alt="Faithlinegh — quality fashion bags"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 40vw"
