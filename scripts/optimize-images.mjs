@@ -10,12 +10,21 @@ import path from 'path';
 
 const PUB = 'public';
 
+// Photographic assets: resize to a sensible max width and re-encode.
+// `png` targets keep transparency where needed; photos use tuned PNG palette.
 const TARGETS = [
   { file: 'hero-1.png', w: 1600, format: 'png' },
   { file: 'hero-2.png', w: 1600, format: 'png' },
   { file: 'category-bags.png', w: 900, format: 'png' },
   { file: 'category-dresses.png', w: 900, format: 'png' },
   { file: 'category-basics.png', w: 900, format: 'png' },
+  { file: 'about-lifestyle.png', w: 1000, format: 'png' },
+  { file: 'about-brand.png', w: 1000, format: 'png' },
+  { file: 'about-founder.png', w: 1000, format: 'png' },
+  { file: 'home-cta-brand.png', w: 1000, format: 'png' },
+  { file: 'home-cta-fashion.png', w: 1000, format: 'png' },
+  { file: 'og-image.png', w: 1200, format: 'png' },
+  { file: 'twitter-image.png', w: 1200, format: 'png' },
   { file: 'wishlist.jpeg', w: 1600, format: 'jpeg' },
 ];
 
@@ -32,11 +41,14 @@ async function optimize({ file, w, format }) {
   if (format === 'jpeg') {
     pipeline = pipeline.jpeg({ quality: 82, mozjpeg: true });
   } else {
-    pipeline = pipeline.png({ quality: 80, compressionLevel: 9, palette: true });
+    pipeline = pipeline.png({ quality: 78, compressionLevel: 9, palette: true, effort: 9 });
   }
 
   const out = await pipeline.toBuffer();
-  fs.writeFileSync(p, out);
+  // Only write if we actually saved bytes.
+  if (out.length < before) {
+    fs.writeFileSync(p, out);
+  }
   const after = fs.statSync(p).size;
   console.log(
     `${file}: ${Math.round(before / 1024)}KB -> ${Math.round(after / 1024)}KB`
