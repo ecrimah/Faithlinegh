@@ -244,7 +244,7 @@ function ShopContent() {
       <PageHero
         title="Browse Our Collections"
         subtitle="Explore quality, affordable bags, basics and dresses — pieces you'll love, delivered to your doorstep anywhere in Ghana."
-        image="/hero-2.png"
+        image="/hero-2.webp"
       />
 
       {/* Mobile Filter Toggle */}

@@ -38,8 +38,8 @@ export default async function CategoriesPage() {
     { chip: 'Everyday', icon: 'ri-shirt-line', fallback: '/category-basics.png' },
     { chip: 'Essentials', icon: 'ri-shopping-bag-3-line', fallback: '/category-bags.png' },
     { chip: 'Statement', icon: 'ri-t-shirt-air-line', fallback: '/category-dresses.png' },
-    { chip: 'New in', icon: 'ri-sparkling-line', fallback: '/hero-2.png' },
-    { chip: 'Curated', icon: 'ri-vip-crown-line', fallback: '/hero-1.png' },
+    { chip: 'New in', icon: 'ri-sparkling-line', fallback: '/hero-2.webp' },
+    { chip: 'Curated', icon: 'ri-vip-crown-line', fallback: '/hero-1.webp' },
     { chip: 'Featured', icon: 'ri-star-smile-line', fallback: '/wishlist.jpeg' },
   ];
 
@@ -79,7 +79,7 @@ export default async function CategoriesPage() {
       <PageHero
         title="Shop by Category"
         subtitle="Explore our curated collections and find exactly what you're looking for"
-        image="/hero-2.png"
+        image="/hero-2.webp"
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">

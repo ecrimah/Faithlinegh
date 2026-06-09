@@ -57,8 +57,8 @@ export default function Home() {
   }, []);
 
   const heroBackgrounds = [
-    { src: '/hero-1.png', position: 'object-[72%_center] sm:object-[65%_center] lg:object-right' },
-    { src: '/hero-2.png', position: 'object-center' },
+    { src: '/hero-1.webp', position: 'object-[72%_center] sm:object-[65%_center] lg:object-right' },
+    { src: '/hero-2.webp', position: 'object-center' },
   ];
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export default function Home() {
       chip: 'Just landed',
       icon: 'ri-sparkling-line',
       color: 'from-[#3D2B21]/70 to-[#3D2B21]',
-      image: '/hero-2.png',
+      image: '/hero-2.webp',
     },
   ];
   const fallbackCategories = [

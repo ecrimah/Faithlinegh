@@ -13,8 +13,8 @@ const PUB = 'public';
 // Photographic assets: resize to a sensible max width and re-encode.
 // `png` targets keep transparency where needed; photos use tuned PNG palette.
 const TARGETS = [
-  { file: 'hero-1.png', w: 1600, format: 'png' },
-  { file: 'hero-2.png', w: 1600, format: 'png' },
+  { file: 'hero-1.webp', w: 1600, format: 'webp' },
+  { file: 'hero-2.webp', w: 1600, format: 'webp' },
   { file: 'category-bags.png', w: 900, format: 'png' },
   { file: 'category-dresses.png', w: 900, format: 'png' },
   { file: 'category-basics.png', w: 900, format: 'png' },
@@ -40,6 +40,8 @@ async function optimize({ file, w, format }) {
 
   if (format === 'jpeg') {
     pipeline = pipeline.jpeg({ quality: 82, mozjpeg: true });
+  } else if (format === 'webp') {
+    pipeline = pipeline.webp({ quality: 78, effort: 6 });
   } else {
     pipeline = pipeline.png({ quality: 78, compressionLevel: 9, palette: true, effort: 9 });
   }

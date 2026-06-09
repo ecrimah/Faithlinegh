@@ -147,7 +147,7 @@ export default function ContactPage() {
       <PageHero
         title={heroTitle}
         subtitle={heroSubtitle}
-        image="/hero-2.png"
+        image="/hero-2.webp"
       />
 
       {/* Contact Methods */}
